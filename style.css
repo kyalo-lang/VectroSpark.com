@@ -21,19 +21,31 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background: linear-gradient(-45deg, #05050a, #1a0b2e, #0b1a2e, #1a0515);
-    background-size: 400% 400%;
-    animation: gradientMesh 15s ease infinite;
+    background-color: #0a0a0a;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(138, 43, 226, 0.05), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(0, 255, 255, 0.03), transparent 25%);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-@keyframes gradientMesh {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+.glow-orb {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 10s ease-in-out infinite;
+}
+.orb-1 { top: -10%; left: -5%; }
+.orb-2 { bottom: -10%; right: -5%; animation-delay: -5s; }
+
+@keyframes float {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(30px) scale(1.1); }
+    100% { transform: translateY(0px) scale(1); }
 }
 
 a {

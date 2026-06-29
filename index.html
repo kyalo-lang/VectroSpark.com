@@ -5,32 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="VectroSpark - Premium Media, Design & Web Services. Elevate your digital presence.">
     <title>VectroSpark | Digital Media & Creative Agency</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
 
+    <!-- HERO SECTION -->
     <header id="home" class="hero section">
         <div class="hero-content">
             <h1 class="animate-up">Ignite Your <span class="gradient-text">Digital Presence</span></h1>
-            <p class="animate-up delay-1">Premium video editing, design, and web development for creators and brands.</p>
+            <p class="animate-up delay-1">Premium video editing, design, and web development for elite creators and industry-leading brands.</p>
             <div class="hero-buttons animate-up delay-2">
-                <a href="#services" class="btn-primary">Explore Services</a>
-                <a href="contact.html" class="btn-secondary">Contact Us</a>
+                <a href="#services" class="btn-primary">Explore Our Services</a>
+                <a href="contact.html" class="btn-secondary">Get a Free Quote</a>
             </div>
         </div>
         <div class="hero-visual animate-fade">
-            <div class="glow-orb orb-1"></div>
-            <div class="glow-orb orb-2"></div>
+            <!-- Subtle obsidian glowing accents -->
+            <div class="glow-orb orb-1" style="background: rgba(255,255,255,0.02); filter: blur(120px);"></div>
+            <div class="glow-orb orb-2" style="background: rgba(138,43,226,0.05); filter: blur(150px);"></div>
         </div>
     </header>
 
-    <section id="services" class="services-section section">
+    <!-- TRUSTED BY SECTION -->
+    <section class="trust-section section" style="padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); background: rgba(0,0,0,0.3);">
+        <div class="container text-center">
+            <p style="color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1.5rem;">Trusted by industry leaders worldwide</p>
+            <div style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; opacity: 0.5; filter: grayscale(100%);">
+                <h3 style="font-weight: 800; font-family: sans-serif;">TECHCORP</h3>
+                <h3 style="font-weight: 800; font-family: serif;">GlobalMedia</h3>
+                <h3 style="font-weight: 800; font-style: italic;">NextGen Studios</h3>
+                <h3 style="font-weight: 800; letter-spacing: 4px;">ELEVATE</h3>
+                <h3 style="font-weight: 800;">ApexBrand</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVEN PROCESS -->
+    <section id="process" class="section">
         <div class="container">
-            <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Our <span class="gradient-text">Proven Process</span></h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">We don't just guess. We follow a strict, data-driven pipeline to ensure every project is delivered flawlessly and exceeds expectations.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px; text-align: center;">
+                    <div style="font-size: 2rem; color: var(--accent-1); margin-bottom: 1rem; font-weight: 800;">01</div>
+                    <h3 style="margin-bottom: 1rem;">Discovery</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">We deep-dive into your brand, goals, and target audience to lay a rock-solid foundation.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px; text-align: center;">
+                    <div style="font-size: 2rem; color: var(--accent-2); margin-bottom: 1rem; font-weight: 800;">02</div>
+                    <h3 style="margin-bottom: 1rem;">Strategy</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Our experts craft a bespoke roadmap and design architecture tailored specifically for your success.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px; text-align: center;">
+                    <div style="font-size: 2rem; color: var(--accent-3); margin-bottom: 1rem; font-weight: 800;">03</div>
+                    <h3 style="margin-bottom: 1rem;">Execution</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">We build, edit, and design with meticulous attention to detail using state-of-the-art tools.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 15px; text-align: center;">
+                    <div style="font-size: 2rem; color: #00ffcc; margin-bottom: 1rem; font-weight: 800;">04</div>
+                    <h3 style="margin-bottom: 1rem;">Scale</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">We launch your project, monitor analytics, and optimize continuously for maximum growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section section" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Elite <span class="gradient-text">Services</span></h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">From high-end video production to lightning-fast web infrastructure, we handle it all.</p>
+            </div>
             <div class="services-grid">
-                <!-- Service Cards -->
                 <a href="services/video-editing.html" class="service-card hidden">
                     <img src="assets/video-editing.png" alt="Video Editing" class="card-img">
                     <div class="card-content">
@@ -91,9 +142,101 @@
         </div>
     </section>
 
+    <!-- WHY CHOOSE US -->
+    <section class="section">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Why Choose <span class="gradient-text">VectroSpark?</span></h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">We are not just another agency. We are a dedicated partner committed to scaling your brand through unparalleled visual excellence and technical superiority.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: rgba(138,43,226,0.2); padding: 5px; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; color: var(--accent-1);">✓</div>
+                            <strong>Award-Winning Quality</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: rgba(138,43,226,0.2); padding: 5px; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; color: var(--accent-1);">✓</div>
+                            <strong>Lightning Fast Turnarounds</strong>
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: rgba(138,43,226,0.2); padding: 5px; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; color: var(--accent-1);">✓</div>
+                            <strong>24/7 Dedicated Support</strong>
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 300px; position: relative;">
+                    <div style="background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01)); padding: 3rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(20px);">
+                        <h3 style="font-size: 3rem; margin-bottom: 0.5rem; color: white;">99%</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Client Satisfaction Rate</p>
+                        <h3 style="font-size: 3rem; margin-bottom: 0.5rem; color: white;">500+</h3>
+                        <p style="color: var(--text-secondary);">Projects Successfully Delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / REVIEWS -->
+    <section id="reviews" class="section" style="background: rgba(255,255,255,0.01);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title" style="margin-bottom: 1rem;">Client <span class="gradient-text">Reviews</span></h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Don't just take our word for it. See what our partners have to say.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                
+                <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 15px;">
+                    <div style="color: gold; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
+                    <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem;">"VectroSpark completely transformed our YouTube channel. The video editing is cinematic and their turnaround time is incredible. Highly recommended!"</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #333;"></div>
+                        <div>
+                            <strong style="display: block;">Sarah Jenkins</strong>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Content Creator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 15px;">
+                    <div style="color: gold; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
+                    <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem;">"The custom website they built for us is lightning fast and looks beautiful. Our conversion rates went up 40% in the first month."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #444;"></div>
+                        <div>
+                            <strong style="display: block;">Michael Chen</strong>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Startup Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: var(--glass-bg); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 15px;">
+                    <div style="color: gold; margin-bottom: 1rem; font-size: 1.2rem;">★★★★★</div>
+                    <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 1.5rem;">"Their SEO management got us to page 1 on Google within months. The team is professional, transparent, and absolutely brilliant at what they do."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #555;"></div>
+                        <div>
+                            <strong style="display: block;">Elena Rodriguez</strong>
+                            <span style="font-size: 0.8rem; color: var(--text-secondary);">Marketing Director</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section" style="text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding: 8rem 0;">
+        <div class="container">
+            <h2 style="font-size: 3.5rem; margin-bottom: 1rem;">Ready to <span class="gradient-text">Spark</span> Your Growth?</h2>
+            <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Join dozens of elite brands scaling with VectroSpark today.</p>
+            <a href="contact.html" class="btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">Start Your Project Now</a>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
-    <script src="./components.js"></script>
-    <script src="./script.js"></script>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

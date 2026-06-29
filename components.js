@@ -10,11 +10,13 @@ const navbarHTML = `
             <a href="${getBasePath()}index.html" class="logo">
                 <img src="https://res.cloudinary.com/duuqawuka/image/upload/v1782737247/VectrosparkLogo.png" alt="VectroSpark Logo">
             </a>
-            <ul class="nav-links">
-                <li><a href="${getBasePath()}index.html">Home</a></li>
-                <li><a href="${getBasePath()}index.html#services">Services</a></li>
-                <li><a href="${getBasePath()}contact.html" class="btn-primary">Contact Us</a></li>
-            </ul>
+            <div class="nav-links">
+                <a href="${getBasePath()}index.html">Home</a>
+                <a href="${getBasePath()}index.html#process">Process</a>
+                <a href="${getBasePath()}index.html#services">Services</a>
+                <a href="${getBasePath()}index.html#reviews">Reviews</a>
+                <a href="${getBasePath()}contact.html" class="btn-primary" style="padding: 0.5rem 1rem;">Let's Talk</a>
+            </div>
         </div>
     </nav>
 `;
