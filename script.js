@@ -27,17 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
 
-    // Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(5, 5, 10, 0.85)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-        } else {
-            navbar.style.background = 'rgba(5, 5, 10, 0.6)';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
