@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | VectroSpark</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .admin-section {
+            padding-top: 150px;
+            min-height: 80vh;
+        }
+        .admin-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 500px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-1);
+        }
+        /* Dashboard specific styles */
+        #dashboard-view {
+            display: none; /* Hidden until logged in */
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .table-wrapper {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        th {
+            background: rgba(138, 43, 226, 0.1);
+            color: var(--accent-3);
+            font-weight: 600;
+        }
+        tr:hover {
+            background: rgba(255,255,255,0.02);
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="section admin-section">
+        <div class="container">
+            
+            <!-- LOGIN VIEW -->
+            <div id="login-view" class="admin-box animate-fade">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                <h2 style="margin-bottom: 1.5rem;">Admin <span class="gradient-text">Login</span></h2>
+                <form id="admin-login-form">
+                    <div class="form-group">
+                        <label for="admin-email">Email</label>
+                        <input type="email" id="admin-email" required placeholder="admin@vectrospark.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-password">Password</label>
+                        <input type="password" id="admin-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Login</button>
+                    <div id="login-error" style="color: #ff3366; margin-top: 1rem; display: none;"></div>
+                </form>
+            </div>
+
+            <!-- DASHBOARD VIEW -->
+            <div id="dashboard-view" class="animate-fade">
+                <div class="dashboard-header">
+                    <h2>Inquiries <span class="gradient-text">Dashboard</span></h2>
+                    <button id="logout-btn" class="btn-secondary" style="border: none; cursor: pointer;">Logout</button>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inquiries-tbody">
+                            <!-- Data will be injected here via admin.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./components.js"></script>
+    <script type="module" src="./admin.js"></script>
+</body>
+</html>

@@ -31,6 +31,7 @@ const footerHTML = `
                 <a href="${getBasePath()}index.html">Home</a>
                 <a href="${getBasePath()}index.html#services">Services</a>
                 <a href="${getBasePath()}contact.html">Contact</a>
+                <a href="${getBasePath()}admin.html" style="color: var(--accent-1);">Admin Center</a>
             </div>
             <div class="footer-contact">
                 <h3>Contact</h3>

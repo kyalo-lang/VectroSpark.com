@@ -1,10 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
 // TODO: Replace the following with your app's Firebase project configuration
-// To get these, go to Firebase Console -> Project Settings -> General -> Web Apps
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "YOUR_API_KEY_HERE",
   authDomain: "your-project-id.firebaseapp.com",
   projectId: "your-project-id",
@@ -14,16 +14,17 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-let app, db;
+export let app, db, auth;
 try {
     app = initializeApp(firebaseConfig);
     db = getFirestore(app);
+    auth = getAuth(app);
     console.log("Firebase initialized (Pending real credentials)");
 } catch (e) {
     console.error("Firebase initialization error:", e);
 }
 
-// Handle Form Submission
+// Handle Contact Form Submission
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('vectrospark-form');
     const msgDiv = document.getElementById('form-message');
@@ -48,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                // Add a new document with a generated id.
                 const docRef = await addDoc(collection(db, "inquiries"), {
                     name: name,
                     email: email,
