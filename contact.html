@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | VectroSpark</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Firebase SDK (Version 9+ compatible, loaded via CDN) -->
+    <script type="module" src="./db.js"></script>
+
+    <style>
+        .contact-section {
+            padding-top: 150px;
+            min-height: 80vh;
+        }
+        .form-container {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-1);
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+        }
+        #form-message {
+            margin-top: 1rem;
+            text-align: center;
+            font-weight: 600;
+        }
+        .success { color: #00ffcc; }
+        .error { color: #ff3366; }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <section class="section contact-section">
+        <div class="container">
+            <h1 class="section-title">Let's <span class="gradient-text">Connect</span></h1>
+            
+            <div class="form-container animate-fade">
+                <form id="vectrospark-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Interested Service</label>
+                        <select id="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="Video Editing">Video Editing</option>
+                            <option value="Graphics & Design">Graphics & Design</option>
+                            <option value="Livestreaming">Livestreaming</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Photoshop">Photoshop</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Web Hosting">Web Hosting</option>
+                            <option value="SEO Management">SEO Management</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
+                    <div id="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./components.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
