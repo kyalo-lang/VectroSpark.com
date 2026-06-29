@@ -10,7 +10,14 @@
 <body>
     <div id="navbar-placeholder"></div>
 
-    <section class="section hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px;">
+    <section class="section hero" style="min-height: 40vh; padding-top: 150px; padding-bottom: 50px; position: relative; overflow: hidden;">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0; opacity: 0.4;">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-stars-in-space-1610-large.mp4" type="video/mp4">
+        </video>
+        <!-- Dark Overlay -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(5,5,10,0.7), rgba(5,5,10,1)); z-index: 1;"></div>
+        
         <div class="container" style="text-align: center; position: relative; z-index: 10;">
             <h1 class="gradient-text" style="font-size: 3.5rem; margin-bottom: 1rem;">Client Reviews</h1>
             <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Don't just take our word for it. See what our elite partners have to say.</p>
