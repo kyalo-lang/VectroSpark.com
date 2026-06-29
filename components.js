@@ -12,9 +12,9 @@ const navbarHTML = `
             </a>
             <div class="nav-links">
                 <a href="${getBasePath()}index.html">Home</a>
-                <a href="${getBasePath()}index.html#process">Process</a>
-                <a href="${getBasePath()}index.html#services">Services</a>
-                <a href="${getBasePath()}index.html#reviews">Reviews</a>
+                <a href="${getBasePath()}process.html">Process</a>
+                <a href="${getBasePath()}services.html">Services</a>
+                <a href="${getBasePath()}reviews.html">Reviews</a>
                 <a href="${getBasePath()}contact.html" class="btn-primary" style="padding: 0.5rem 1rem;">Let's Talk</a>
             </div>
         </div>
